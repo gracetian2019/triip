@@ -1,0 +1,120 @@
+    body,
+    html {
+        font-family: 'Merriweather', sans-serif;
+        font-size: 100%;
+        margin: 0px auto;
+        text-align: center;
+        padding: 0px;
+        background: #41444b;
+        scroll-behavior: smooth;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 100vh;
+        max-width: 100%;
+        margin: 0px auto;
+    }
+    
+    body h1,
+    html h1 {
+        color: #1a1a1a;
+        margin: 0px auto;
+        font-size: 3rem;
+        line-height: 2;
+        text-align: left;
+        font-weight: lighter;
+        padding-left: 1%;
+    }
+    
+    #info {
+        margin: 5% auto;
+        padding: 5%;
+        min-width: 50vw;
+        max-width: 90vw;
+        background: rgba(0, 0, 0, 0.3);
+    }
+    
+    #info h1 {
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+        color: white;
+    }
+    
+    #info p {
+        color: white;
+        font-weight: lighter;
+        width: 75%;
+        margin: 0% auto;
+        line-height: 1.5;
+    }
+    
+    #intro .light {
+        font-weight: lighter;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    #find {
+        margin: 0px auto;
+        border: 2px solid #31FFF9;
+        border-radius: 5rem;
+        max-width: 300px;
+        width: 50%;
+        min-width: 200px;
+        color: white;
+        height: 4rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background: none;
+        text-align: center;
+    }
+    
+    #find:hover {
+        border-color: white;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    
+    .image {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        margin: 0% auto;
+        position: auto;
+        bottom: 0px;
+        object-fit: cover;
+    }
+    
+    #results {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
+        transition: visibility 0s, opacity 0.5s ease-in-out;
+        font-size: 2rem;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        margin: 0px auto;
+    }
+    
+    #go {
+        margin: 0px 10%;
+        padding-top: 10vh;
+        font-size: 3rem;
+        font-weight: lighter;
+        opacity: 0.8;
+    }
+    
+    #result {
+        font-size: 1rem;
+        font-weight: bold;
+        width: 90%;
+        margin: 0px auto;
+    }
+    
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
