@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Destination.destroy_all
+Comment.destroy_all
+
 destinations = [
     {
         name: "Central Park",
@@ -57,9 +60,6 @@ destinations = [
 ]
 Destination.create(destinations)
 
-comments = [   
-{content: "It's a pretty place", destination_id: 1},
-{content: " One of my fav place.", destination_id: 2},
-{content: "Beatiful.", destination_id: 3}
-]
-Comment.create(comments)
+Destination.all.each do |destination|
+    Comment.create(content:"It's one of my fav place.", destination_id: destination.id)
+end

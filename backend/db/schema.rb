@@ -17,9 +17,10 @@ ActiveRecord::Schema.define(version: 2020_08_17_223226) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
-    t.integer "destination_id"
+    t.bigint "destination_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["destination_id"], name: "index_comments_on_destination_id"
   end
 
   create_table "destinations", force: :cascade do |t|
@@ -37,4 +38,5 @@ ActiveRecord::Schema.define(version: 2020_08_17_223226) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "destinations"
 end
