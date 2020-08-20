@@ -18,7 +18,7 @@ before_action :set_params, only: [:show, :update, :destroy]
     end
 private 
 def comment_params
-    params.require(:comment).permit(:comment, :destination_id)
+    params.require(:comment).permit(:content, :destination_id)
 end
 def set_params
     @comment = Comment.find(params[:id])
