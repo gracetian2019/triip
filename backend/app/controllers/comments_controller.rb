@@ -16,6 +16,9 @@ before_action :set_params, only: [:show, :update, :destroy]
         @comment = Comment.find(params[:id])
         render json: @comment, status: 200
     end
+    def destroy
+        @comment.destroy
+    end
 private 
 def comment_params
     params.require(:comment).permit(:content, :destination_id)

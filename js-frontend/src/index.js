@@ -62,6 +62,7 @@ function renOneComment(comment) {
     let commentLi = document.createElement("li")
     document.getElementById("commentList").appendChild(commentLi)
     commentLi.innerHTML = `${comment.content}`
+    commentLi.appendChild(deleteBtn(comment))
 }
 
 function showFormBtn() {
@@ -126,5 +127,31 @@ function submitInputComment(e) {
 
         })
 
+
+}
+
+function deleteBtn(comment) {
+    let delBtn = document.createElement("BUTTON");
+    delBtn.id = "delBtn"
+    delBtn.innerHTML = "X"
+        // console.log(comment)
+    delBtn.addEventListener('click', (e) => {
+        deleteComment(e, comment)
+    })
+    return delBtn
+
+}
+
+function deleteComment(e, comment) {
+    e.preventDefault();
+    let targetLi = e.currentTarget.parentElement
+
+    fetch(`http://localhost:3000/comments/${comment.id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => { targetLi.remove() })
 
 }
