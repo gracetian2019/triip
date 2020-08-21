@@ -3,7 +3,6 @@ const results = document.getElementById("results")
 const result = document.getElementById("result")
 let container = document.getElementById("container")
 let info = document.getElementById("info")
-let again = document.getElementById("try-again")
 
 let comments = []
 let destinationData
@@ -35,7 +34,7 @@ destinationBtn.addEventListener('click', () => {
 function showCommentBtn() {
     let showCommentBtn = document.createElement("BUTTON")
     showCommentBtn.id = "showCommentBtn"
-    showCommentBtn.innerHTML = "Comment"
+    showCommentBtn.innerHTML = "Show Comment"
     showCommentBtn.addEventListener('click', () => {
         //console.log(comments)
         renderComments()
@@ -44,7 +43,6 @@ function showCommentBtn() {
         document.getElementById("commentList").hidden = false;
     }, false)
     return showCommentBtn
-
 
 }
 
@@ -90,7 +88,7 @@ function commentForm() {
     commentFormContainer.addEventListener('submit', (e) => {
         e.preventDefault();
         submitInputComment(e)
-
+        commentFormContainer.reset()
     })
     return commentFormContainer
 }
