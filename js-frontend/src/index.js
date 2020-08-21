@@ -4,6 +4,12 @@ const result = document.getElementById("result")
 let container = document.getElementById("container")
 let info = document.getElementById("info")
 
+let returnBtn = document.createElement("a")
+returnBtn.setAttribute("href", "index.html")
+returnBtn.id = "returnBtn"
+returnBtn.textContent = "Go find another destination"
+results.appendChild(returnBtn)
+
 let comments = []
 let destinationData
 
@@ -30,6 +36,8 @@ destinationBtn.addEventListener('click', () => {
         })
 
 })
+
+
 
 function showCommentBtn() {
     let showCommentBtn = document.createElement("BUTTON")
